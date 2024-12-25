@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            font-size: 20px;
+        }
+    .container1{
+        font-weight: 700; 
+    }
+    .box{
+        background-color: lightblue;
+        border: 5px solid black;
+        padding: 20px;
+        margin: 20px;
+        width: 300px;
+        box-sizing: border-box;
+    }
+    p{
+        background-color: lightyellow;
+    }
+    /* CSS Selectors */
+    .class-selector{
+        color: green;
+    }
+    #ID-selector{
+        color: red;
+    }
+    /* Pseudo Classes Selector */
+    </style>
+</head>
+<body>
+    <div class="container1">
+    <H1>Git and CSS Practice</H1>
+    <h2>Git Concepts</h2>
+    <p>Working Directory: The current files you are working on in your project.</p>
+    <p>Staging Area: A place where changes are added before committing.</p>
+    <p>Repository: The place where all commits are stored, including the project history.</p>
+    <p>Changeset changes made to the file, ready to be staged and committed.</p>
+    <img src="https://docs.gitopia.com/assets/images/git_workflow-9316513f375d1d73139a7c7d27d1212b.jpg" alt="">
+    </div>
+    <div>
+        <H2>Git Remote and Branching</H2>
+        <ol>
+            <li>Initialize a Git repository using <code>git init</code>.</li>
+            <li>Connect to a remote repository :<code>git remote add origin &lt;url&gt;</code>.</li>
+            <li>Visualize branches with <code>git branch -v</code>.</li>
+            <li>Create a new branch: <code>git branch feature-branch</code>.</li>
+            <li>Switch branches: <code>git checkout feature-branch</code> or <code>git switch feature-branch</code></li>
+            <li>Change the remote name: <code>git remote rename origin new-remote</code><div class=""></div></li>
+        </ol>
+    </div>
+    <h2>CSS Box Model</h2>
+    <div class="box">
+        This box demonstrates the box model with a background color, border, padding, and margin.
+    </div>
+    <h2>CSS Selectors</h2>
+    <div id="CSS-selectors">
+    <p>This paragraph demonstrates a base rule.</p>
+    <p class="class-selector">This paragraph uses a class selector.</p>
+    <p id="ID-selector">This paragraph uses an ID ID selector.</p>
+    </div>
+    <h2>Combinator Selectors</h2>
+    <p>This paragraph is a direct child of a div (Child combinator)</p>
+
+    <h2>Next Example</h2>
+    <P>This paragraph is the next sibling of an h2 (Next Sibling combinator)</P>
+    <p>This paragraph is a subsequent sibling of an h2 (Subsequent sibling combinator)</p>
+    <h2>Pseudo-Class Selectors</h2>
+    <ul>
+        <li>First item (First child)</li>
+        <li>Second item (Nth child)</li>
+        <li>Last item (Last child)</li>
+    </ul>
+    <h2>Pseudo-Element Selectors</h2>
+    <p>This paragraph demonstates <code>::before</code> and <code>::first-line</code> pseudo-elements.</p>
+    <H2>Attribute Selectors</H2>
+    <div>
+        <a href="">Visit Example</a><br>
+        <a href="">Open in new tab</a>
+    </div>
+    <h3>Practic both Git and CSS using this example page. Experiment with the concept outline here!</h3>
+</body>
+</html>
