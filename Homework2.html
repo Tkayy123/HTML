@@ -3,87 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homework2.1</title>
     <style>
-    body{
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            font-size: 20px;
+        .container-section-1{
+            padding: 0px;
+            margin: 20px auto;
+            max-width: 750px;
         }
-    .container1{
-        font-weight: 700; 
-    }
-    .box{
-        background-color: lightblue;
-        border: 5px solid black;
-        padding: 20px;
-        margin: 20px;
-        width: 300px;
-        box-sizing: border-box;
-    }
-    p{
-        background-color: lightyellow;
-    }
-    /* CSS Selectors */
-    .class-selector{
-        color: green;
-    }
-    #ID-selector{
-        color: red;
-    }
-    /* Pseudo Classes Selector */
+        .title{
+            text-align: center;
+            color: green;
+        }
+        .section-1{
+           margin: 10px;
+           padding: 20px;
+           border: 3px solid black;
+           box-shadow: 0px 1px 8px 5px #888888;
+        }
+        .h3-combinator-container{
+            margin: 5px;
+            padding: 5px;
+            background-color: lightgreen;
+        }
+        .combinator-container{
+            background-color: lightgreen;
+
+        }
+        .text-color1{
+            background-color: aqua;
+            padding: 10px;
+        }
+        label{
+            background-color: lightcoral;
+        }
+        h3.center-sibling + p { /* Adjacent sibling combinator */
+            text-align: center;
+        }
+        .combinator-child > p{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+        .section-2{
+            margin: 10px;
+            padding: 10px;
+           border: 3px solid black;
+           box-shadow: 0px 1px 8px 5px #888888;
+        }
+        .container-section-2{
+
+            margin: 10px auto;
+            max-width: 700px;
+        }
+        .pseudo-element p::first-line{
+            color:red;
+        }
+        a{
+            text-decoration: overline;
+            color: blue;
+        }
+        .container-section-2 nav a::after {
+            content: " |";
+        }
+        .text-block{
+            border: 1px solid gray;
+            text-indent: 100px;
+        }
     </style>
 </head>
 <body>
-    <div class="container1">
-    <H1>Git and CSS Practice</H1>
-    <h2>Git Concepts</h2>
-    <p>Working Directory: The current files you are working on in your project.</p>
-    <p>Staging Area: A place where changes are added before committing.</p>
-    <p>Repository: The place where all commits are stored, including the project history.</p>
-    <p>Changeset changes made to the file, ready to be staged and committed.</p>
-    <img src="https://docs.gitopia.com/assets/images/git_workflow-9316513f375d1d73139a7c7d27d1212b.jpg" alt="">
-    </div>
-    <div>
-        <H2>Git Remote and Branching</H2>
-        <ol>
-            <li>Initialize a Git repository using <code>git init</code>.</li>
-            <li>Connect to a remote repository :<code>git remote add origin &lt;url&gt;</code>.</li>
-            <li>Visualize branches with <code>git branch -v</code>.</li>
-            <li>Create a new branch: <code>git branch feature-branch</code>.</li>
-            <li>Switch branches: <code>git checkout feature-branch</code> or <code>git switch feature-branch</code></li>
-            <li>Change the remote name: <code>git remote rename origin new-remote</code><div class=""></div></li>
-        </ol>
-    </div>
-    <h2>CSS Box Model</h2>
-    <div class="box">
-        This box demonstrates the box model with a background color, border, padding, and margin.
-    </div>
-    <h2>CSS Selectors</h2>
-    <div id="CSS-selectors">
-    <p>This paragraph demonstrates a base rule.</p>
-    <p class="class-selector">This paragraph uses a class selector.</p>
-    <p id="ID-selector">This paragraph uses an ID ID selector.</p>
-    </div>
-    <h2>Combinator Selectors</h2>
-    <p>This paragraph is a direct child of a div (Child combinator)</p>
+    <div class="container-section-1">
+    <h1 class="title">CSS Text Practice Page 2</h1>
 
-    <h2>Next Example</h2>
-    <P>This paragraph is the next sibling of an h2 (Next Sibling combinator)</P>
-    <p>This paragraph is a subsequent sibling of an h2 (Subsequent sibling combinator)</p>
-    <h2>Pseudo-Class Selectors</h2>
-    <ul>
-        <li>First item (First child)</li>
-        <li>Second item (Nth child)</li>
-        <li>Last item (Last child)</li>
-    </ul>
-    <h2>Pseudo-Element Selectors</h2>
-    <p>This paragraph demonstates <code>::before</code> and <code>::first-line</code> pseudo-elements.</p>
-    <H2>Attribute Selectors</H2>
-    <div>
-        <a href="">Visit Example</a><br>
-        <a href="">Open in new tab</a>
+    <div class="section-1">
+        <h2>Practice on combinator CSS - Using font-variant</h2>
+        <div class="h3-combinator-container">   
+            <h3 class="combinator-container">"h3.combinator-container" is 1 way how we call css selector with class in css</h3>
+            <p class="text-color1">This is a p staying inside of a div which bound the h3.combinator-container</p>
+        </div>
+
+        <h3 class="center-sibling">This is h3 with <i>"h3.center-siblings"</i></h3>
+        <p>This text styled because of staying next to <b>h3</b> with class <i>"center-siblings".</i></p>
+        <i>Please use <strong>next siblings combinator</strong></i>
+        <div class="combinator-child">
+            <h3>This is a div with class .combinator-child </h3>
+            <label for="">This is a label html</label>
+            <input type="text" placeholder="This is a placeholder">
+            <p>This is a nested label tag html but not be css by the .combinator-child class <input type="text" placeholder="This is a placeholder"></p>
+        </div>
     </div>
-    <h3>Practic both Git and CSS using this example page. Experiment with the concept outline here!</h3>
+</div>
+
+<div class="container-section-2">
+    <div class="section-2">
+        <div class="pseudo-element">
+        <h2>Practice On Pseudo Element</h2>
+            <p>OPTION 1: THIS IS STYLED BY FIRST-LINE USING PSEUDO ELEMENT</p>
+            <span>Option 2: Not effected</span> <br>
+            <span><br>Option 3: Not effected</span>
+        </div>
+
+        <div>
+            <h3>This nav tag with items of a tag</h3>
+            <p>Using pseudo element ::after no add seperator</p>
+            <p>take a look at text-decoration property of css</p>
+        <nav>
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JavaScript</a>
+            <a href="#">Python</a>
+        </nav>
+        </div>
+        <div class="text-block">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam rem esse eos possimus vitae eveniet, error velit facilis exercitationem veniam molestiae nulla, maiores et architecto ab pariatur accusantium quia expedita!
+        </div>
+</div>
 </body>
 </html>
